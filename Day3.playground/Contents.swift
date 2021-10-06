@@ -75,9 +75,30 @@ var archEnemies = [String: String]()
 
 // How to use sets for fast data lookups
 
-let actors = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel Jackson"])
+var actors = Set<String>()
+actors.insert("Denzel")
+actors.insert("Tom")
+actors.insert("Samuel")
 print(actors)
 
-            
-               
+//How to create and use enums
+var selected = "Monday"
+selected = "Tuesday"
+selected = "January"
+selected = "Friday "
+//bad^^^^
+
+// good
+enum Weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    //or can do: case monday, tuesday, wednesday, thursday, friday
+}
+var day = Weekday.monday
+day = Weekday.tuesday
+day = Weekday.friday
+print(day)
 
